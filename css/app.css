@@ -1,0 +1,99 @@
+:root {
+    --bs-blue: #037BC0;
+    --bs-green: #258d10fd;
+}
+html {
+    font-size: 62.5%;  /* 1 rem = 10px **/
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+@media (min-width: 768px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+@media (min-width: 768px) {
+    h2 {
+        font-size: 4rem;
+    }
+}
+h3 {
+    font-size: 2.4rem;
+}
+@media (min-width: 768px) {
+    h3 {
+        font-size: 3rem;
+    }
+}
+/** Reescribir colores */
+.text-primary,
+.nombre-sitio {
+    color: var(--bs-blue)!important;
+}
+.btn-success {
+    background-color: var(--bs-green)!important;
+}
+.bg-primary,
+.btn-primary {
+    background-color: var(--bs-blue)!important;
+}
+
+.hero {
+    background-image: url(../img/principal.jpg);
+    height: 25rem;
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        height: 55rem;
+    }
+}
+
+/** Productos */
+@media (min-width:768px) {
+    .producto img {
+        height: 52rem;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.categoria img {
+    transition-property: transform;
+    transition-duration: 300ms;
+}
+.categoria img:hover {
+    transform: scale(1.2);
+}
+
+.galeria li:not(:last-of-type) {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    padding: 1rem;
+    font-size: 1.6rem;
+}
+
+#btn-politicas {
+    font-size: 2rem; /* Tamaño de la letra más grande */
+    padding: 1rem 2rem; /* Ajusta el espacio interno del botón */
+    text-align: center; /* Asegura el texto centrado */
+}

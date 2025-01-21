@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ecommerce - Contacto</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <header class="py-5 ">
+        <h1 class="text-center">
+            Tienda
+            <span class="text-primary"> de Muebles</span>
+        </h1>
+    </header>
+
+    <div class="border-top py-4">
+        <div class="navbar navbar-expand-lg container navbar-light ">
+            <a class="navbar-brand nombre-sitio d-lg-none fs-2 fw-bold text-uppercase" href="index.html">
+                Tienda Muebles
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navegacion" class="collapse navbar-collapse">
+                <nav class="navbar-nav container d-flex flex-md-row justify-content-md-between text-center">
+                    <a class="text-dark text-decoration-none" href="index.html">Inicio</a>
+                    <a class="text-dark text-decoration-none" href="nosotros.html">Nosotros</a>
+                    <a class="text-dark text-decoration-none" href="tienda.html">Tienda</a>
+                    <a class="text-dark text-decoration-none" href="blog.html">Blog</a>
+                    <a class="text-dark text-decoration-none" href="galeria.html">Galería</a>
+                    <a class="text-dark text-decoration-none" href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <main class="container-xl py-5 ">
+        <h2 class="text-center my-5">Contacto</h2>
+
+        <div class="row justify-content-center">
+            <form class="col-md-8 needs-validation" novalidate>
+                <fieldset>
+                    <legend class="bg-primary text-center text-white fs-2">Tus Datos</legend>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Tu Nombre" required>
+                        <span class="invalid-feedback">Hubo un error...</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="asunto">Asunto:</label>
+                        <input type="text" class="form-control" id="asunto" placeholder="Tu Asunto">
+                        <span class="valid-feedback">Muy bien!!</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Tu Email">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="tel">Teléfono:</label>
+                        <input type="tel" class="form-control" id="tel" placeholder="Tu Teléfono">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="tel">Mensaje:</label>
+                        <textarea class="form-control" rows="10"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="bg-primary text-center text-white fs-2">País</legend>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="pais">País:</label>
+                        <select class="form-control" id="pais">
+                            <option value="">--Seleccione--</option>
+                            <option value="AR">Argentina</option>
+                            <option value="BB">Barbados</option>
+                            <option value="BO">Bolivia</option>
+                            <option value="BR">Brasil</option>
+                            <option value="BS">Bahamas</option>
+                            <option value="CL">Chile</option>
+                            <option value="CO">Colombia</option>
+                            <option value="CR">Costa Rica</option>
+                            <option value="CU">Cuba</option>
+                            <option value="DO">República Dominicana</option>
+                            <option value="EC">Ecuador</option>
+                            <option value="ES">España</option>
+                            <option value="GT">Guatemala</option>
+                            <option value="HN">Honduras</option>
+                            <option value="HT">Haití</option>
+                            <option value="JM">Jamaica</option>
+                            <option value="MX">México</option>
+                            <option value="NI">Nicaragua</option>
+                            <option value="PA">Panamá</option>
+                            <option value="PR">Perú</option>
+                            <option value="PY">Paraguay</option>
+                            <option value="SR">Surinam</option>
+                            <option value="SV">El Salvador</option>
+                            <option value="TT">Trinidad y Tobago</option>
+                            <option value="UY">Uruguay</option>
+                            <option value="VE">Venezuela</option>
+                            <option value="GY">Guyana</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="bg-primary text-center text-white fs-2">Información Extra</legend>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="cliente">Cliente:</label>
+                        <input name="tipo" type="radio" class="form-check-input" id="cliente">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="proveedor">Proveedor:</label>
+                        <input name="tipo" type="radio" class="form-check-input" id="proveedor">
+                    </div>
+
+                </fieldset>
+
+                <div class="d-grid d-md-flex">
+                    <input class="btn btn-secondary fs-2 px-5 mt-5" type="submit" value="Enviar Formulario">
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+    <div class="container-xl py-5 text-primary">
+        <h2 class="text-center my-5">Preguntas Frecuentes</h2>
+
+        <div class="accordion" id="accordionFAQ">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Puedo cambiar mis prendas?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionFAQ">
+                    <div class="accordion-body">
+                        Sí, puedes cambiar tus prendas siguiendo las políticas de cambio de nuestra tienda.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ¿Cuánto tiempo tengo para devolver una prenda?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionFAQ">
+                    <div class="accordion-body">
+                        Tienes 30 días para devolver una prenda a partir de la fecha de compra.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ¿Qué debo hacer para devolver o cambiar una de mis prendas?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionFAQ">
+                    <div class="accordion-body">
+                        Debes seguir los pasos indicados en nuestra sección de devoluciones en línea.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mt-5" id="contacto text-primary">
+            <h2 class="text-center my-5">Ayuda en Línea</h2>
+            <p class="text-center text-dark">
+                Si necesitas más ayuda, puedes contactarnos a través de nuestro
+                <a href="contacto.html" class="text-primary">Formulario de Contacto</a>.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="mt-5 text-center" id="politicas-cambios">
+        <!-- Botón que abre el modal -->
+        <button class="btn btn-primary btn-lg" id="btn-politicas" data-bs-toggle="modal"
+            data-bs-target="#modalPoliticas">
+            Políticas de cambios y devoluciones
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalPoliticas" tabindex="-1" aria-labelledby="modalPoliticasLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="modalPoliticasLabel">Políticas de cambios y devoluciones</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Si necesitas hacer un cambio y/o devolución de algún producto, te la hacemos fácil:</p>
+                    <ol>
+                        <li>Acércate a mi tienda (donde realizaste la compra).</li>
+                        <li>Presenta el ticket de compra, el producto en buenas condiciones y con el empaque cerrado.
+                        </li>
+                    </ol>
+                    <p class="mt-3"><strong>¡Y listo!</strong></p>
+                    <ul>
+                        <li><em>En caso de productos perecibles dentro de las 24 horas posteriores a la compra.</em>
+                        </li>
+                        <li><em>En caso de productos no perecibles se podrá hacer hasta 7 días posteriores a la
+                                compra.</em></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="pt-5 mt-5 border-top">
+        <div class="container-xl mt-5">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <h3 class="mb-4">Categorías</h3>
+                    <nav class="d-flex flex-column">
+                        <a class="text-dark text-decoration-none" href="galeria.html">Cocina</a>
+                        <a class="text-dark text-decoration-none" href="galeria.html">Oficina</a>
+                        <a class="text-dark text-decoration-none" href="galeria.html">Jardín</a>
+                        <a class="text-dark text-decoration-none" href="galeria.html">Sala</a>
+                        <a class="text-dark text-decoration-none" href="galeria.html">Dormitorios</a>
+                    </nav>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <h3 class="mb-4">Sobre Nosotros</h3>
+                    <nav class="d-flex flex-column">
+                        <a class="text-dark text-decoration-none" href="nosotros.html">Nuestra Historia</a>
+                        <a class="text-dark text-decoration-none" href="nosotros.html">Misión, Visión y Valores</a>
+                        <a class="text-dark text-decoration-none" href="nosotros.html">Carreras</a>
+                        <a class="text-dark text-decoration-none" href="nosotros.html">Política de Privacidad</a>
+                        <a class="text-dark text-decoration-none" href="nosotros.html">Términos del Servicio</a>
+                    </nav>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <h3 class="mb-4">Soporte</h3>
+                    <nav class="d-flex flex-column">
+                        <a class="text-dark text-decoration-none" href="contacto.html">Preguntas Frecuentes</a>
+                        <a class="text-dark text-decoration-none" href="contacto.html">Ayuda en Línea</a>
+                        <a class="text-dark text-decoration-none" href="contacto.html">Políticas de cambios y devoluciones</a>
+                    </nav>
+                </div>
+            </div>
+
+            <p class="mt-5 text-center fs-2">Todos los derechos Reservados.<span class="text-primary"> TiendaMuebles</span></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
