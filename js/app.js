@@ -56,6 +56,20 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!form.checkValidity()) {                                // Si el formulario no es válido, evitamos que se envíe
       event.preventDefault();                                   // Evita que el formulario se envíe
       event.stopPropagation();                                  // Evita que el evento de submit se propague
+    } else {
+      event.preventDefault();                                   // Evita el envío real (quítalo si deseas enviarlo a un servidor)
+
+      // ✅ Mensaje de éxito al usuario
+      alert("✅ Formulario enviado correctamente. Nos pondremos en contacto contigo pronto.");
+
+      // Opcional: Restablecer el formulario después del envío exitoso
+      form.reset();
+
+      // Eliminar las clases de validación para que el formulario vuelva a su estado inicial
+      form.classList.remove('was-validated');
+      form.querySelectorAll('.is-valid, .is-invalid').forEach(input => {
+        input.classList.remove('is-valid', 'is-invalid');
+      });
     }
 
     // Agregamos la clase "was-validated" para que Bootstrap muestre los mensajes de validación
@@ -153,13 +167,26 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Evento para finalizar la compra
+
   document.getElementById("comprar-btn").addEventListener("click", function () {
     if (carrito.length === 0) {
-      alert("El carrito está vacío.");                                                                 // Muestra un mensaje si el carrito está vacío
+      alert("⚠️ El carrito está vacío. Agrega productos antes de comprar.");
     } else {
-      alert("¡Gracias por tu compra!");
-      carrito = [];                                                                                     // Vacía el carrito después de la compra
-      actualizarCarrito();                                                                              // Actualiza la tabla para reflejar el carrito vacío
+      // ✅ Mensaje de éxito
+      alert("✅ ¡Gracias por tu compra! Tu pedido ha sido procesado correctamente.");
+
+      // Efecto de desvanecimiento antes de vaciar el carrito
+      const listaCarrito = document.getElementById("lista-carrito");
+      listaCarrito.style.transition = "opacity 0.5s";
+      listaCarrito.style.opacity = "0";                                                                 // Desvanece la lista antes de vaciar el carrito
+
+      setTimeout(() => {
+        carrito = [];                                                                                   // Vacía el carrito después de la compra
+        actualizarCarrito();                                                                            // Actualiza la tabla
+
+        // Restablecer la opacidad para futuras compras
+        listaCarrito.style.opacity = "1";
+      }, 500);                                                                                          // Espera 0.5 segundos para dar tiempo a la animación
     }
   });
 });
