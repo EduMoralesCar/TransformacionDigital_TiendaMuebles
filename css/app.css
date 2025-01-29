@@ -47,6 +47,7 @@ h3 {
 }
 .btn-success {
     background-color: var(--bs-green)!important;
+    
 }
 .bg-primary,
 .btn-primary {
@@ -93,7 +94,24 @@ h3 {
 }
 
 #btn-politicas {
-    font-size: 2rem; /* Tamaño de la letra más grande */
-    padding: 1rem 2rem; /* Ajusta el espacio interno del botón */
-    text-align: center; /* Asegura el texto centrado */
+    font-size: 2rem;                                            /* Tamaño de la letra más grande */
+    padding: 1rem 2rem;                                         /* Ajusta el espacio interno del botón */
+    text-align: center;                                         /* Asegura el texto centrado */
+}
+
+/*enlace subrayado cuando el usuario acerque el cursor y vuelva ala normalidad cuando se aleje enn el Blog*/
+.subrayado:hover {
+    text-decoration: underline !important;
+}
+
+
+/*Botones de compra*/
+.boton {
+    display: block;                                              /* Hace que el botón ocupe todo el ancho disponible */
+    width: 80%;                                                  /* Ajusta el ancho del botón */
+    margin: 0 auto;                                              /* Centra horizontalmente */
+    padding: 12px 20px;                                          /* Agrega espacio interno */
+    font-size: 1.2rem;                                           /* Aumenta el tamaño del texto */
+    border-radius: 8px;                                          /* Bordes redondeados para mejor estética */
+    text-align: center;
 }

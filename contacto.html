@@ -19,21 +19,18 @@
 </head>
 
 <body>
-    <header class="py-5 ">
-        <h1 class="text-center">
-            Tienda
-            <span class="text-primary"> de Muebles</span>
+    <header class="py-5">
+        <h1 class="text-center">Tienda<span class="text-primary"> de Muebles</span>
         </h1>
     </header>
 
     <div class="border-top py-4">
         <div class="navbar navbar-expand-lg container navbar-light ">
             <a class="navbar-brand nombre-sitio d-lg-none fs-2 fw-bold text-uppercase" href="index.html">
-                Tienda Muebles
+                Tienda de Muebles
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion"> <span
+                    class="navbar-toggler-icon"></span> </button>
 
             <div id="navegacion" class="collapse navbar-collapse">
                 <nav class="navbar-nav container d-flex flex-md-row justify-content-md-between text-center">
@@ -49,7 +46,7 @@
     </div>
 
 
-    <main class="container-xl py-5 ">
+    <main class="container-xl py-5">
         <h2 class="text-center my-5">Contacto</h2>
 
         <div class="row justify-content-center">
@@ -60,25 +57,36 @@
                     <div class="mb-3">
                         <label class="form-label" for="nombre">Nombre:</label>
                         <input type="text" class="form-control" id="nombre" placeholder="Tu Nombre" required>
-                        <span class="invalid-feedback">Hubo un error...</span>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="asunto">Asunto:</label>
-                        <input type="text" class="form-control" id="asunto" placeholder="Tu Asunto">
-                        <span class="valid-feedback">Muy bien!!</span>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Tu Email">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="tel">Teléfono:</label>
-                        <input type="tel" class="form-control" id="tel" placeholder="Tu Teléfono">
+                        <div class="invalid-feedback">⚠️ Ingresa tu nombre.</div>
+                        <div class="valid-feedback">✅ ¡Se ve bien!</div>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label" for="tel">Mensaje:</label>
-                        <textarea class="form-control" rows="10"></textarea>
+                        <label class="form-label" for="asunto">Asunto:</label>
+                        <input type="text" class="form-control" id="asunto" placeholder="Tu Asunto" required>
+                        <div class="invalid-feedback">⚠️ El asunto no puede estar vacío.</div>
+                        <div class="valid-feedback">✅ ¡Asunto ingresado correctamente!</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Tu Email" required>
+                        <div class="invalid-feedback">⚠️ Ingresa un email válido.</div>
+                        <div class="valid-feedback">✅ ¡Correo válido!</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="tel">Teléfono:</label>
+                        <input type="tel" class="form-control" id="tel" placeholder="Tu Teléfono" required>
+                        <div class="invalid-feedback">⚠️ Ingresa tu número de teléfono.</div>
+                        <div class="valid-feedback">✅ ¡Número correcto!</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="mensaje">Mensaje:</label>
+                        <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                        <div class="invalid-feedback">⚠️ El mensaje no puede estar vacío.</div>
+                        <div class="valid-feedback">✅ ¡Mensaje recibido!</div>
                     </div>
                 </fieldset>
 
@@ -87,36 +95,21 @@
 
                     <div class="mb-3">
                         <label class="form-label" for="pais">País:</label>
-                        <select class="form-control" id="pais">
+                        <select class="form-control" id="pais" required>
                             <option value="">--Seleccione--</option>
                             <option value="AR">Argentina</option>
-                            <option value="BB">Barbados</option>
                             <option value="BO">Bolivia</option>
                             <option value="BR">Brasil</option>
-                            <option value="BS">Bahamas</option>
                             <option value="CL">Chile</option>
                             <option value="CO">Colombia</option>
-                            <option value="CR">Costa Rica</option>
-                            <option value="CU">Cuba</option>
-                            <option value="DO">República Dominicana</option>
                             <option value="EC">Ecuador</option>
-                            <option value="ES">España</option>
-                            <option value="GT">Guatemala</option>
-                            <option value="HN">Honduras</option>
-                            <option value="HT">Haití</option>
-                            <option value="JM">Jamaica</option>
                             <option value="MX">México</option>
-                            <option value="NI">Nicaragua</option>
-                            <option value="PA">Panamá</option>
-                            <option value="PR">Perú</option>
-                            <option value="PY">Paraguay</option>
-                            <option value="SR">Surinam</option>
-                            <option value="SV">El Salvador</option>
-                            <option value="TT">Trinidad y Tobago</option>
+                            <option value="PE">Perú</option>
                             <option value="UY">Uruguay</option>
                             <option value="VE">Venezuela</option>
-                            <option value="GY">Guyana</option>
                         </select>
+                        <div class="invalid-feedback">⚠️ Selecciona un país.</div>
+                        <div class="valid-feedback">✅ ¡País seleccionado!</div>
                     </div>
                 </fieldset>
 
@@ -124,15 +117,17 @@
                     <legend class="bg-primary text-center text-white fs-2">Información Extra</legend>
 
                     <div class="mb-3">
-                        <label class="form-label" for="cliente">Cliente:</label>
-                        <input name="tipo" type="radio" class="form-check-input" id="cliente">
+                        <label class="form-label">¿Eres Cliente o Proveedor?</label>
+                        <div class="form-check">
+                            <input name="tipo" type="radio" class="form-check-input" id="cliente" required>
+                            <label class="form-check-label" for="cliente">Cliente</label>
+                        </div>
+                        <div class="form-check">
+                            <input name="tipo" type="radio" class="form-check-input" id="proveedor" required>
+                            <label class="form-check-label" for="proveedor">Proveedor</label>
+                        </div>
+                        <div class="invalid-feedback">⚠️ Selecciona una opción.</div>
                     </div>
-
-                    <div class="mb-3">
-                        <label class="form-label" for="proveedor">Proveedor:</label>
-                        <input name="tipo" type="radio" class="form-check-input" id="proveedor">
-                    </div>
-
                 </fieldset>
 
                 <div class="d-grid d-md-flex">
@@ -141,7 +136,6 @@
             </form>
         </div>
     </main>
-
 
     <div class="container-xl py-5 text-primary">
         <h2 class="text-center my-5">Preguntas Frecuentes</h2>
@@ -271,17 +265,20 @@
                     <nav class="d-flex flex-column">
                         <a class="text-dark text-decoration-none" href="contacto.html">Preguntas Frecuentes</a>
                         <a class="text-dark text-decoration-none" href="contacto.html">Ayuda en Línea</a>
-                        <a class="text-dark text-decoration-none" href="contacto.html">Políticas de cambios y devoluciones</a>
+                        <a class="text-dark text-decoration-none" href="contacto.html">Políticas de cambios y
+                            devoluciones</a>
                     </nav>
                 </div>
             </div>
 
-            <p class="mt-5 text-center fs-2">Todos los derechos Reservados.<span class="text-primary"> TiendaMuebles</span></p>
+            <p class="mt-5 text-center fs-2">Todos los derechos Reservados.<span class="text-primary">
+                    TiendaMuebles</span></p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
 </body>
 
