@@ -66,15 +66,9 @@ h3 {
     background-color: var(--bs-blue) !important;
 }
 
-/* .hero {
-    background-image: url(../img/principal.jpg);
-    height: 25rem;
-    background-size: cover;
-    background-position: center;
-} */
+
 
 /* Carusel para la imagenes principales */
-
 .main {
     min-height: 100vh;
     padding: 0;
@@ -110,6 +104,16 @@ h3 {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 1050;
 }
+
+
+.carousel-item img {
+    height: 76vh; /* Cambios: 85rem o 300px */
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+
 
 /* Punto rojo de notificación */
 .notificacion {
