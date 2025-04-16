@@ -46,7 +46,7 @@
     </div>
 
 
-    <main class="container-xl py-5">
+    <main id="ayuda"  class="container-xl py-5">
         <h2 class="text-center my-5">Contacto</h2>
 
         <div class="row justify-content-center">
@@ -137,64 +137,76 @@
         </div>
     </main>
 
-    <div id="preguntas" class="container-xl py-5 text-primary">
-        <h2 class="text-center my-5">Preguntas Frecuentes</h2>
 
-        <div class="accordion" id="accordionFAQ">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        ¿Puedo cambiar mis Muebles?
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body">
-                        Sí, puedes cambiar tus muebles siguiendo las políticas de cambio de nuestra tienda.
+
+    <div id="preguntas" class="container-xxl py-5">
+        <div class="mx-auto p-4 border rounded shadow" style="max-width:1000px;">
+            <h2 class="text-center text-primary mb-5">Preguntas Frecuentes</h2>
+
+            <div class="accordion" id="accordionFAQ">
+
+                <!-- Pregunta 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed bg-white text-dark fw-normal fs-3 my-2" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                            aria-controls="collapseOne">
+                            ¿Puedo cambiar mis Muebles?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body fs-3 text-secondary">
+                            Sí, puedes cambiar tus muebles siguiendo las políticas de cambio de nuestra tienda.
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        ¿Cuánto tiempo tengo para devolver un Mueble?
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body">
-                        Tienes 30 días para devolver el mueble a partir de la fecha de compra.
+                <!-- Pregunta 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed bg-white text-dark fw-normal fs-3 my-2" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            ¿Cuánto tiempo tengo para devolver un Mueble?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body fs-3 text-secondary">
+                            Tienes 30 días para devolver el mueble a partir de la fecha de compra.
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        ¿Qué debo hacer para devolver o cambiar una de mis Muebles?
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body">
-                        Debes seguir los pasos indicados en nuestra sección de devoluciones en línea.
+                <!-- Pregunta 3 -->
+                <div id="preguntas" class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed bg-white text-dark fw-normal fs-3 my-2" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">
+                            ¿Qué debo hacer para devolver o cambiar una de mis Muebles?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body fs-3 text-secondary">
+                            Debes seguir los pasos indicados en nuestra sección de devoluciones en línea.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <div id="ayuda" class="mt-5" id="contacto text-primary">
-            <h2 class="text-center my-5">Ayuda en Línea</h2>
-            <p class="text-center text-dark">
-                Si necesitas más ayuda, puedes contactarnos a través de nuestro
-                <a href="contacto.html" class="text-primary">Formulario de Contacto</a>.
-            </p>
-        </div>
+    <div id="ayuda" class="mt-5" id="contacto text-primary">
+        <h2 class="text-center my-5">Ayuda en Línea</h2>
+        <p class="text-center text-dark">
+            Si necesitas más ayuda, puedes contactarnos a través de nuestro
+            <a href="contacto.html" class="text-primary">Formulario de Contacto</a>.
+        </p>
+    </div>
     </div>
 
 
@@ -218,7 +230,8 @@
                 <div class="modal-body">
                     <p>Si necesitas hacer un cambio y/o devolución de algún producto, te la hacemos fácil:</p>
                     <ol>
-                        <li>Acércate a mi tienda(donde realizaste la compra). Como tambien puedes enviarnos un Formulario que esta en parte superior.</li>
+                        <li>Acércate a mi tienda(donde realizaste la compra). Como tambien puedes enviarnos un
+                            Formulario que esta en parte superior.</li>
                         <li>Presenta el ticket de compra, el producto en buenas condiciones y con el empaque cerrado.
                         </li>
                     </ol>

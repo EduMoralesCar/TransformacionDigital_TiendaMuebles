@@ -1,4 +1,4 @@
-// JAVA SCRIPT EN LA GALERIA
+// JS en la Area de Galeria
 // Obtenemos el elemento del modal con el ID
 const modalImagen = document.getElementById('modal-imagen');
 
@@ -31,49 +31,51 @@ if (modalImagen) {
 
 
 
-// JAVA SCRIPT EN LA CONTACTO
-// Validad con Bootsrap y Java Script en el formulario de Contacto en Linea
+// JS en la Area de Contacto
 document.addEventListener("DOMContentLoaded", function () {
-  'use strict';                                                 // modo estricto para evitar errores comunes
+  'use strict';
 
-  // Seleccionamos el formulario
   const form = document.querySelector('.needs-validation');
-  const inputAsunto = document.getElementById('asunto');
+  const campos = form.querySelectorAll('input, textarea, select');
 
-  // Validación dinámica del campo "Asunto"
-  inputAsunto.addEventListener('input', function () {
-    if (inputAsunto.value.trim() !== '') {                      // Verificamos si el campo tiene contenido
-      inputAsunto.classList.remove('is-invalid');               // Quitamos la clase de error
-      inputAsunto.classList.add('is-valid');                    // Agregamos la clase de éxito
+  // Validar campo individual en tiempo real
+  function validarCampo(campo) {
+    if (!campo.checkValidity()) {
+      campo.classList.remove('is-valid');
+      campo.classList.add('is-invalid');
     } else {
-      inputAsunto.classList.remove('is-valid');                 // Quitamos la clase de éxito si estaba
-      inputAsunto.classList.add('is-invalid');                  // Agregamos la clase de error
+      campo.classList.remove('is-invalid');
+      campo.classList.add('is-valid');
     }
+  }
+
+  // Aplicar validación en todos los campos cuando escriben o salen del campo
+  campos.forEach(campo => {
+    campo.addEventListener('input', () => validarCampo(campo));
+    campo.addEventListener('blur', () => validarCampo(campo));
   });
 
-  // Validación general del formulario
+  // Validación al enviar el formulario
   form.addEventListener('submit', function (event) {
-    if (!form.checkValidity()) {                                // Si el formulario no es válido, evitamos que se envíe
-      event.preventDefault();                                   // Evita que el formulario se envíe
-      event.stopPropagation();                                  // Evita que el evento de submit se propague
-    } else {
-      event.preventDefault();                                   // Evita el envío real (quítalo si deseas enviarlo a un servidor)
+    event.preventDefault(); // Evita el envío real
 
-      // ✅ Mensaje de éxito al usuario
+    // Validar todos los campos
+    campos.forEach(campo => validarCampo(campo));
+
+    if (!form.checkValidity()) {
+      event.stopPropagation();
+      form.classList.add('was-validated');
+    } else {
+      // ✅ Mostrar mensaje
       alert("✅ Formulario enviado correctamente. Nos pondremos en contacto contigo pronto.");
 
-      // Opcional: Restablecer el formulario después del envío exitoso
+      // Limpiar todo
       form.reset();
-
-      // Eliminar las clases de validación para que el formulario vuelva a su estado inicial
       form.classList.remove('was-validated');
-      form.querySelectorAll('.is-valid, .is-invalid').forEach(input => {
-        input.classList.remove('is-valid', 'is-invalid');
+      campos.forEach(campo => {
+        campo.classList.remove('is-valid', 'is-invalid');
       });
     }
-
-    // Agregamos la clase "was-validated" para que Bootstrap muestre los mensajes de validación
-    form.classList.add('was-validated');
   }, false);
 });
 
@@ -84,8 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// JAVA SCRIPT EN LA TIENDA
-// 📌 JAVA SCRIPT EN LA TIENDA (Reemplaza todo el bloque viejo con esto)
+//  JS en la Area de Tienda
 document.addEventListener("DOMContentLoaded", function () {
   let carrito = [];  // El carrito inicia vacío
   const notificacion = document.getElementById("notificacion-carrito");
@@ -97,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalCarrito = document.getElementById("total-carrito");
   const seccionProductos = document.querySelector("#productos"); // Asegúrate de que esta sección tenga el ID correcto
 
-  // ✅ Función para actualizar la notificación del carrito
+  // Función para actualizar la notificación del carrito
   function actualizarNotificacion() {
     if (carrito.length > 0) {
       notificacion.style.display = "block"; // Mostrar el punto rojo
@@ -106,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ✅ Función para actualizar la lista de productos en el carrito
+  // Función para actualizar la lista de productos en el carrito
   function actualizarCarrito() {
     listaCarrito.innerHTML = ""; // Limpiar lista antes de actualizar
     let total = 0;  // Reiniciar total
@@ -154,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ✅ Evento para agregar productos al carrito
+  // Evento para agregar productos al carrito
   botonesAgregar.forEach(boton => {
     boton.addEventListener("click", function () {
       const card = this.closest(".card, .producto");
@@ -175,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ✅ Evento para vaciar el carrito
+  // Evento para vaciar el carrito
   botonVaciar.addEventListener("click", function () {
     if (carrito.length === 0) {
       alert("⚠️ El carrito ya está vacío.");
@@ -189,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("🛒 El carrito ha sido vaciado.");
   });
 
-  // ✅ Evento para finalizar la compra
+  // Evento para finalizar la compra
   botonComprar.addEventListener("click", function () {
     if (carrito.length === 0) {
       alert("⚠️ El carrito está vacío. Agrega productos antes de comprar.");
@@ -208,10 +209,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // ✅ Ocultar el botón del carrito al inicio
+  // Ocultar el botón del carrito al inicio
   botonCarrito.style.display = "none";
 
-  // ✅ Mostrar el botón cuando el usuario llega a la sección de productos
+  // Mostrar el botón cuando el usuario llega a la sección de productos
   function toggleBotonCarrito() {
     const rect = seccionProductos.getBoundingClientRect();
     if (rect.top <= window.innerHeight * 0.5) {
@@ -223,65 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", toggleBotonCarrito);
 
-  // ✅ Asegurar que todo esté limpio al cargar la página
+  // Asegurar que todo esté limpio al cargar la página
   actualizarCarrito();
   actualizarNotificacion();
 });
-
-
-
-// CARRITO DE COMPRA
-document.addEventListener("DOMContentLoaded", function () {
-  let carrito = []; // El carrito inicia vacío
-  const notificacion = document.getElementById("notificacion-carrito");
-  const botonesAgregar = document.querySelectorAll(".agregar-carrito");
-  const botonVaciar = document.getElementById("vaciar-carrito");
-  const botonCarrito = document.querySelector(".boton-carrito");
-  const seccionProductos = document.querySelector("#productos"); // Asegúrate de que esta sección tenga el ID correcto
-
-  // Función para actualizar la notificación del carrito
-  function actualizarNotificacion() {
-    if (carrito.length > 0) {
-      notificacion.style.display = "block"; // Mostrar el punto rojo
-    } else {
-      notificacion.style.display = "none"; // Ocultar si el carrito está vacío
-    }
-  }
-
-  // Evento para agregar productos al carrito
-  botonesAgregar.forEach(boton => {
-    boton.addEventListener("click", function () {
-      carrito.push("producto"); // Simulación de agregar un producto
-      actualizarNotificacion(); // Actualiza el punto rojo
-    });
-  });
-
-  // Evento para vaciar el carrito
-  if (botonVaciar) {
-    botonVaciar.addEventListener("click", function () {
-      carrito = []; // Vaciar el carrito
-      actualizarNotificacion(); // Ocultar el punto rojo
-    });
-  }
-
-  // Ocultar el botón del carrito al inicio
-  botonCarrito.style.display = "none";
-
-  // Función para mostrar el botón cuando el usuario llegue a la sección de productos
-  function toggleBotonCarrito() {
-    const rect = seccionProductos.getBoundingClientRect();
-    if (rect.top <= window.innerHeight * 0.5) {
-      botonCarrito.style.display = "flex"; // Mostrar el botón
-    } else {
-      botonCarrito.style.display = "none"; // Ocultar el botón
-    }
-  }
-
-  // Evento de scroll para mostrar/ocultar el botón del carrito
-  window.addEventListener("scroll", toggleBotonCarrito);
-
-  // Asegura que el carrito esté vacío al cargar la página
-  actualizarNotificacion();
-});
-
-

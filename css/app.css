@@ -107,7 +107,8 @@ h3 {
 
 
 .carousel-item img {
-    height: 76vh; /* Cambios: 85rem o 300px */
+    height: 76vh;
+    /* Cambios: 85rem o 300px */
     object-fit: cover;
     object-position: center;
     width: 100%;
@@ -211,4 +212,30 @@ h3 {
     border-radius: 8px;
     /* Bordes redondeados para mejor estética */
     text-align: center;
+}
+
+
+
+/* Estilo del botón grande */
+.grupo-btn-grande {
+    font-size: 2rem;
+    /* Aumenta tamaño del texto */
+    padding: 1.5rem 4rem;
+    /* Más grande aún */
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+/* Estilo del contenido del modal */
+.grupo-texto-grande {
+    font-size: 2rem;
+    /* Más grande aún */
+    line-height: 1.9;
+}
+
+/* Modal más grande aún si lo deseas */
+@media (min-width: 768px) {
+    #modalGrupo .modal-dialog {
+        max-width: 600px;
+    }
 }

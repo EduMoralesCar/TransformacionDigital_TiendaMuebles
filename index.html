@@ -55,18 +55,18 @@
                             data-bs-slide-to="0"></button>
                         <button type="button" data-bs-target="#indicadores" data-bs-slide-to="1"></button>
                         <button type="button" data-bs-target="#indicadores" data-bs-slide-to="2"></button>
-                        
-                        
+
+
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="img/Principal/principal1.jpg" alt="principal 1" class="d-block w-100">
                         </div>
-                        
+
                         <div class="carousel-item">
                             <img src="img/Principal/principal2.jpg" alt="principal 2" class="d-block w-100">
                         </div>
-                        
+
                         <div class="carousel-item">
                             <img src="img/Principal/principal3.jpg" alt="principal 3" class="d-block w-100">
                         </div>
@@ -84,6 +84,55 @@
             </div>
         </div>
     </main>
+
+
+
+    <!-- Presentación del grupo en un botón y modal -->
+    <div id="grupo-presentacion" class="mt-5 text-center">
+        <!-- Botón que abre el modal -->
+        <button class="btn btn-primary grupo-btn-grande" id="btn-grupo" data-bs-toggle="modal"
+            data-bs-target="#modalGrupo">
+            📘 Información del Grupo
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalGrupo" tabindex="-1" aria-labelledby="modalGrupoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h3 class="modal-title fw-bold" id="modalGrupoLabel">Presentación del Grupo</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-start grupo-texto-grande">
+                    <p><strong>📚 Curso:</strong> <span class="text-dark">Marco de Desarrollo Web</span></p>
+                    <p><strong>👥 Sección:</strong> <span class="text-dark">21733</span></p>
+                    <p><strong>🧑‍💻 Integrantes:</strong></p>
+
+                    <div class="container">
+                        <div class="row mb-2">
+                            <div class="col-md-8">Morales Carlos, Edu</div>
+                            <div class="col-md-4"><strong>U23222093</strong><span class="text-warning"> (100%)</span></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-8">Mejia Poma, Patricia Valeria</div>
+                            <div class="col-md-4"><strong>U22309749</strong><span class="text-warning"> (100%)</span></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-8">Jacinto Condor, Evelin Maritza</div>
+                            <div class="col-md-4"><strong>U22228996</strong><span class="text-warning"> (100%)</span></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-8">Santamaria Suyon, darwin Joel</div>
+                            <div class="col-md-4"><strong>U22235835</strong><span class="text-warning"> (100%)</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
 
