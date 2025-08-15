@@ -2,6 +2,8 @@
 
 Este proyecto representa la **transformación digital de una tienda de muebles**, desarrollado como parte de un trabajo académico. El objetivo principal es ofrecer una experiencia web atractiva y funcional para la venta de productos de decoración y mobiliario.
 
+---
+
 ## 📦 Contenido del Proyecto
 
 El repositorio incluye una estructura web completa con las siguientes secciones:
@@ -20,6 +22,8 @@ Además, se incluyen carpetas organizadas para los recursos:
 - `img/`: Imágenes de productos y categorías.
 - `blog/`: Archivos relacionados con el blog.
 
+---
+
 ## 🛠️ Herramientas y Tecnologías Utilizadas
 
 - **HTML5**: Estructura semántica del sitio.
@@ -28,13 +32,19 @@ Además, se incluyen carpetas organizadas para los recursos:
 - **Bootstrap 5**: Framework para diseño responsivo y componentes UI.
 - **Google Fonts**: Tipografías modernas y elegantes.
 
+---
+
 ## 🎯 Objetivo
 
 Brindar una experiencia digital moderna para una tienda de muebles, simulando un entorno de e-commerce con enfoque en diseño, usabilidad y presentación visual.
 
+---
+
 ## 📸 Vista Previa
 
 El sitio incluye imágenes de productos como sofás, conjuntos de dormitorio, decoración de hogar y más, organizados por categorías como Oficina, Hogar y Cocina.
+
+---
 
 ## 🚀 Cómo Clonar y Ejecutar el Proyecto
 
@@ -58,6 +68,8 @@ Puedes abrir el archivo index.html directamente en tu navegador:
 - Asegúrate de tener conexión a internet para que se cargue Bootstrap desde CDN.
 - Si deseas modificar estilos, edita el archivo css/app.css
 
+---
+
 ## 📁 Estructura del Repositorio
 ```bash
 📁 TransformacionDigital_TiendaMuebles
@@ -73,6 +85,8 @@ Puedes abrir el archivo index.html directamente en tu navegador:
 ├── galeria.html      # Galería visual
 └── contacto.html     # Formulario de contacto
 ```
+---
+
 ## 👨‍💻 Autor
 
 Desarrollado por [EduMoralesCar](https://github.com/EduMoralesCar) como parte del proyecto final de transformación digital.
