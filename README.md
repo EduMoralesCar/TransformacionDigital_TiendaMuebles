@@ -106,9 +106,10 @@ Puedes abrir el archivo index.html directamente en tu navegador:
 <img width="1100" height="1003" alt="image" src="https://github.com/user-attachments/assets/6a296734-1b7d-4b70-8adc-5bc5ebc1d9c0" />
 <img width="1076" height="605" alt="image" src="https://github.com/user-attachments/assets/b2e33789-c6ae-4945-86d0-1ce61cd125de" />
 
-
-
 > ### Paso 5: Sección de Galeria
+<img width="1909" height="1005" alt="image" src="https://github.com/user-attachments/assets/4546e557-efe6-4e80-90b8-6cbfce10f1c5" />
+<img width="1909" height="1005" alt="image" src="https://github.com/user-attachments/assets/e4f58867-79e6-46c4-82a9-3360fd9e9451" />
+
 > ### Paso 6: Sección de Contacto
 
 
