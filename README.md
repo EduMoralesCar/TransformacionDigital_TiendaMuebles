@@ -89,17 +89,28 @@ Puedes abrir el archivo index.html directamente en tu navegador:
 
 ## 🖼️ Capturas de Pantalla
 > ### Paso 1: Página principal con acceso rápido a productos destacados y navegación general.
-<img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/8791b8de-8ee4-4005-be44-97334dcde9b7" />
+<img width="1910" height="1005" alt="image" src="https://github.com/user-attachments/assets/229751a5-a8b4-43b8-82f4-0d5c3cb0dccc" />
 
-> ### Paso 2: Secsión de Nosotros
-> ### Paso 3:
-> ### Paso 4:
-> ### Paso 5:
-> ### Paso 6:
-> ### Paso 7:
-> ### Paso 8:
-> ### Paso 9:
-> ### Paso 10:
+
+> ### Paso 2: Sección de Nosotros
+<img width="700" height="1004" alt="image" src="https://github.com/user-attachments/assets/b5d15a3c-0f44-4904-9594-c644f84cccf5" />
+
+> ### Paso 3: Sección de Tienda
+<img width="1908" height="1002" alt="image" src="https://github.com/user-attachments/assets/2ea0daa8-ca5c-45f2-af10-ec8cb702e535" />
+<img width="1908" height="1004" alt="image" src="https://github.com/user-attachments/assets/a1c4a5ee-b2c8-4274-8388-ab43a093c369" />
+<img width="1906" height="729" alt="image" src="https://github.com/user-attachments/assets/6bcc0090-955f-41ce-b4cf-0c2b1859c1d5" />
+
+> ### Paso 4: Sección de Blog
+<img width="1102" height="1004" alt="image" src="https://github.com/user-attachments/assets/2e44c781-89df-41d3-b7af-6095c0765a9b" />
+<img width="1106" height="1004" alt="image" src="https://github.com/user-attachments/assets/a52d897b-8e87-48ef-a570-b6f1dcb89574" />
+<img width="1100" height="1003" alt="image" src="https://github.com/user-attachments/assets/6a296734-1b7d-4b70-8adc-5bc5ebc1d9c0" />
+<img width="1076" height="605" alt="image" src="https://github.com/user-attachments/assets/b2e33789-c6ae-4945-86d0-1ce61cd125de" />
+
+
+
+> ### Paso 5: Sección de Galeria
+> ### Paso 6: Sección de Contacto
+
 
 ---
 
