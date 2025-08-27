@@ -1,4 +1,4 @@
-<img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/f516a627-1a5a-4f82-aa99-e689949193f3" /># 🛋️ Transformación Digital - Tienda de Muebles
+# 🛋️ Transformación Digital - Tienda de Muebles
 
 Este proyecto representa la **transformación digital de una tienda de muebles**, desarrollado como parte de un trabajo académico. El objetivo principal es ofrecer una experiencia web atractiva y funcional para la venta de productos de decoración y mobiliario.
 
