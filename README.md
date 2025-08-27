@@ -127,10 +127,14 @@ Puedes abrir el archivo index.html directamente en tu navegador:
 <img width="1916" height="745" alt="image" src="https://github.com/user-attachments/assets/41177e38-259d-486f-9c8a-bbec79335eed" />
 
 > ### Politicas de Cambio y Devoluciones
-<img width="740" height="200" alt="image" src="https://github.com/user-attachments/assets/b74ca0cc-8e49-4d87-be43-c306f9a94faa" />
+<p align="center">
+  <img width="740" height="200" alt="image" src="https://github.com/user-attachments/assets/b74ca0cc-8e49-4d87-be43-c306f9a94faa" />
+</p>
 
 > ### Resultado
-<img width="370" height="361" alt="image" src="https://github.com/user-attachments/assets/8b528941-f2a4-4a6e-8eb6-65733b50dd96" />
+<p align="center">
+  <img width="370" height="361" alt="image" src="https://github.com/user-attachments/assets/8b528941-f2a4-4a6e-8eb6-65733b50dd96" />
+</p>
 
 ---
 
