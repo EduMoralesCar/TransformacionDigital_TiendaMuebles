@@ -111,6 +111,8 @@ Puedes abrir el archivo index.html directamente en tu navegador:
 <img width="1909" height="1005" alt="image" src="https://github.com/user-attachments/assets/e4f58867-79e6-46c4-82a9-3360fd9e9451" />
 
 > ### Paso 6: Sección de Contacto
+<img width="1916" height="1005" alt="image" src="https://github.com/user-attachments/assets/91eb56b7-46d7-4609-bdbd-7aac66baad00" />
+<img width="1916" height="745" alt="image" src="https://github.com/user-attachments/assets/41177e38-259d-486f-9c8a-bbec79335eed" />
 
 
 ---
