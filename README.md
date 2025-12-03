@@ -40,11 +40,6 @@ Brindar una experiencia digital moderna para una tienda de muebles, simulando un
 
 ---
 
-## 📸 Vista Previa
-
-El sitio incluye imágenes de productos como sofás, conjuntos de dormitorio, decoración de hogar y más, organizados por categorías como Oficina, Hogar y Cocina.
-
----
 
 ## 🚀 Cómo Clonar y Ejecutar el Proyecto
 
@@ -84,7 +79,8 @@ Puedes abrir el archivo index.html directamente en tu navegador:
 └── 📁 js
 ```
 ---
-
+## 📸 Vista Previa
+> El sitio incluye imágenes de productos como sofás, conjuntos de dormitorio, decoración de hogar y más, organizados por categorías como Oficina, Hogar y Cocina.
 ## 🖼️ Capturas de Pantalla
 > ### Paso 1: Página principal con acceso rápido a productos destacados y navegación general.
 <img width="1910" height="1005" alt="image" src="https://github.com/user-attachments/assets/229751a5-a8b4-43b8-82f4-0d5c3cb0dccc" />
