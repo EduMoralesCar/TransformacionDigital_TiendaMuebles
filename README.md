@@ -4,25 +4,6 @@ Este proyecto representa la **transformación digital de una tienda de muebles**
 
 ---
 
-## 📦 Contenido del Proyecto
-
-El repositorio incluye una estructura web completa con las siguientes secciones:
-
-- `index.html`: Página principal con presentación de productos destacados.
-- `nosotros.html`: Información sobre la historia, misión y visión de la tienda.
-- `tienda.html`: Catálogo de productos con imágenes, descripciones y precios.
-- `blog.html`: Artículos relacionados con decoración y tendencias.
-- `galeria.html`: Galería visual de ambientes decorados.
-- `contacto.html`: Formulario de contacto y soporte al cliente.
-
-Además, se incluyen carpetas organizadas para los recursos:
-
-- `css/`: Estilos personalizados.
-- `js/`: Scripts para interactividad.
-- `img/`: Imágenes de productos y categorías.
-- `blog/`: Archivos relacionados con el blog.
-
----
 
 ## 🛠️ Herramientas y Tecnologías Utilizadas
 
