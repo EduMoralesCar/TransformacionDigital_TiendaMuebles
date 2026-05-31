@@ -132,6 +132,3 @@ Puedes abrir el archivo index.html directamente en tu navegador:
 
 ---
 
-## 👨‍💻 Autor
-
-Desarrollado por [EduMoralesCar](https://github.com/EduMoralesCar) como parte del proyecto final de transformación digital.
