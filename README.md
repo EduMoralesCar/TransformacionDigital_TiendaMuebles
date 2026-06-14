@@ -1,23 +1,36 @@
-# 🛋️ Transformación Digital - Tienda de Muebles
+# 🛋️ Transformación Digital - Tienda de Muebles Premium 3D
 
-Este proyecto representa la **transformación digital de una tienda de muebles**, desarrollado como parte de un trabajo académico. El objetivo principal es ofrecer una experiencia web atractiva y funcional para la venta de productos de decoración y mobiliario.
+Este proyecto representa la **transformación digital y rediseño premium de una tienda de muebles real**, desarrollado como parte de un trabajo de e-commerce moderno de alta gama. Combina una interfaz interactiva tridimensional (3D) con un diseño responsivo impecable y un sistema avanzado de temas.
 
 ---
 
-
 ## 🛠️ Herramientas y Tecnologías Utilizadas
 
-- **HTML5**: Estructura semántica del sitio.
-- **CSS3**: Estilos personalizados y diseño responsivo.
-- **JavaScript**: Funcionalidades interactivas.
-- **Bootstrap 5**: Framework para diseño responsivo y componentes UI.
-- **Google Fonts**: Tipografías modernas y elegantes.
+- **HTML5 Semántico**: Estructura robusta y optimizada para SEO.
+- **Vanilla CSS3 (Custom Properties)**: Estilos interactivos, variables dinámicas para modo oscuro/claro, animaciones personalizadas y efectos de vidrio esmerilado (Glassmorphism).
+- **JavaScript ES6+**: Catálogo dinámico de 40 productos, lógica de filtrado y búsqueda predictiva, y manipulación en tiempo real del visor 3D.
+- **Bootstrap 5.3**: Framework responsivo para la estructura general del sitio y modales/offcanvas.
+- **Iconografía Inline SVG**: Reemplazo total de emojis antiguos por iconos vectoriales profesionales limpios y animados en hover.
+
+---
+
+## 🌟 Características Destacadas y Rediseño Premium
+
+1. **Visor de Muebles 3D Interactivo:** Visualiza cada mueble en un escenario tridimensional con rotación libre (por arrastre de ratón o botones) y zoom dinámico en tiempo real.
+2. **Encabezado Único y Pegajoso (Sticky Header):** Unificación del banner y el menú de navegación en una barra superior flotante con desenfoque de fondo premium (Blur/Glassmorphism).
+3. **Selector de Tema Integrado:** Motor dinámico para cambiar instantáneamente entre modo oscuro y modo claro en todo el sitio (incluyendo subpáginas de blog), persistiendo la preferencia del usuario en `localStorage`.
+4. **Carrito de Compras Drawer Estilo Recibo:**
+   - Visualización estructurada con formato de tarjeta de recibo moderna (rounded rows con espaciado).
+   - Estado vacío interactivo con icono vectorial flotante.
+   - Indicador/badge en el header con micro-animación de pulso (`pop-badge`) al añadir artículos.
+5. **Tarjetas de Producto Uniformes:** Catálogo con alineación por flexbox, imágenes recortadas de forma proporcional (`object-fit: cover` a `240px`) y descripciones limitadas a un máximo de 3 líneas para mantener simetría matemática perfecta.
+6. **Buscador Predictivo y Filtros Rápidos:** Filtrado interactivo en la tienda por categorías (Oficina, Hogar, Sala, Dormitorio) combinable con barra de búsqueda instantánea.
 
 ---
 
 ## 🎯 Objetivo
 
-Brindar una experiencia digital moderna para una tienda de muebles, simulando un entorno de e-commerce con enfoque en diseño, usabilidad y presentación visual.
+Brindar una experiencia de comercio electrónico real y premium, demostrando capacidades avanzadas de diseño web de alta gama, usabilidad, animaciones modernas y optimización en dispositivos móviles y de escritorio.
 
 ---
 
