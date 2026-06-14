@@ -87,27 +87,27 @@ function renderProducts(products, limit = null) {
     }
 
     grid.innerHTML += `
-      <div class="col-lg-4 col-md-6 col-sm-12" style="transition: all 0.3s ease;">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch" style="transition: all 0.3s ease;">
         <div class="card tilt-3d" data-categoria="${p.categoria}">
           <div class="card-img-wrapper">
             ${badgeHtml}
             <img class="card-img-top" src="${p.image}" alt="${p.nombre}">
           </div>
-          <div class="card-body text-center bg-primary text-white p-5 d-flex flex-column justify-content-between">
-            <div class="mb-4">
-              <h3 class="fs-2 fw-bold text-white mb-3">${p.nombre}</h3>
-              <p class="fs-4 text-light-opacity" style="opacity: 0.8; line-height: 1.6; min-height: 80px;">${p.desc}</p>
+          <div class="card-body">
+            <div class="mb-3">
+              <h3 class="product-title">${p.nombre}</h3>
+              <p class="product-desc">${p.desc}</p>
             </div>
             <div>
-              <div class="mb-4 d-flex justify-content-center align-items-center">
+              <div class="price-wrapper">
                 <span class="price-original">$${p.precioOriginal.toFixed(2)}</span>
-                <span class="price-current fs-1 fw-bold">$${p.precio.toFixed(2)}</span>
+                <span class="price-current">$${p.precio.toFixed(2)}</span>
               </div>
               <div class="product-actions">
-                <button class="boton btn btn-success fs-3 fw-bold text-uppercase py-3 agregar-carrito d-flex align-items-center justify-content-center flex-grow-1">
+                <button class="btn btn-agregar agregar-carrito">
                   ${SVG_ICONS.cart} Agregar
                 </button>
-                <button class="btn btn-view-3d btn-lg d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#modal3D" data-nombre="${p.nombre}" data-imagen="${p.image}">
+                <button class="btn btn-3d btn-view-3d" data-bs-toggle="modal" data-bs-target="#modal3D" data-nombre="${p.nombre}" data-imagen="${p.image}">
                   ${SVG_ICONS.cube} 3D
                 </button>
               </div>
@@ -204,45 +204,94 @@ document.addEventListener("DOMContentLoaded", function () {
   const seccionProductos = document.querySelector("#productos");
 
   function actualizarNotificacion() {
-    if (!notificacion) return;
-    if (carrito.length > 0) {
-      notificacion.style.display = "block";
-    } else {
-      notificacion.style.display = "none";
+    const headerCount = document.getElementById("header-cart-count");
+    const totalItems = carrito.reduce((acc, p) => acc + p.cantidad, 0);
+
+    if (headerCount) {
+      headerCount.innerText = totalItems;
+      headerCount.style.display = totalItems > 0 ? "flex" : "none";
+      if (totalItems > 0) {
+        headerCount.classList.remove("pulse-badge");
+        void headerCount.offsetWidth; // Trigger reflow to restart animation
+        headerCount.classList.add("pulse-badge");
+      }
+    }
+
+    if (notificacion) {
+      notificacion.innerText = totalItems;
+      notificacion.style.display = totalItems > 0 ? "block" : "none";
     }
   }
 
   function actualizarCarrito() {
     if (!listaCarrito || !totalCarrito) return;
-    listaCarrito.innerHTML = "";
-    let total = 0;
-
-    carrito.forEach((producto, index) => {
-      const subtotal = producto.precio * producto.cantidad;
-      total += subtotal;
-
-      listaCarrito.innerHTML += `
-        <tr>
-            <td>${producto.nombre}</td>
-            <td>$${producto.precio.toFixed(2)}</td>
-            <td>
-                <input type="number" class="form-control cantidad-producto" data-index="${index}" min="1" value="${producto.cantidad}">
-            </td>
-            <td>$${subtotal.toFixed(2)}</td>
-            <td>
-                <button class="btn btn-danger btn-sm eliminar-producto" data-index="${index}">Eliminar</button>
-            </td>
-        </tr>
-      `;
-    });
-
-    totalCarrito.innerText = total.toFixed(2);
+    
+    const tableResponsive = document.querySelector("#carrito .table-responsive");
+    const emptyStateId = "cart-empty-state";
+    let emptyState = document.getElementById(emptyStateId);
+    
+    if (carrito.length === 0) {
+      if (tableResponsive) tableResponsive.style.display = "none";
+      if (!emptyState) {
+        emptyState = document.createElement("div");
+        emptyState.id = emptyStateId;
+        emptyState.className = "cart-empty-state text-center py-5 d-flex flex-column align-items-center justify-content-center";
+        emptyState.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-muted mb-3"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <h4 class="fw-bold mb-2">Tu carrito está vacío</h4>
+          <p class="text-muted fs-4 px-3">Explora nuestros productos y agrega tus muebles favoritos.</p>
+        `;
+        document.getElementById("carrito").appendChild(emptyState);
+      } else {
+        emptyState.style.display = "flex";
+      }
+      
+      totalCarrito.innerText = "0.00";
+      if (botonComprar) botonComprar.disabled = true;
+      if (botonVaciar) botonVaciar.disabled = true;
+      
+    } else {
+      if (tableResponsive) tableResponsive.style.display = "block";
+      if (emptyState) emptyState.style.display = "none";
+      if (botonComprar) botonComprar.disabled = false;
+      if (botonVaciar) botonVaciar.disabled = false;
+      
+      listaCarrito.innerHTML = "";
+      let total = 0;
+  
+      carrito.forEach((producto, index) => {
+        const subtotal = producto.precio * producto.cantidad;
+        total += subtotal;
+  
+        listaCarrito.innerHTML += `
+          <tr class="cart-item-row">
+              <td class="fw-bold text-start ps-3">${producto.nombre}</td>
+              <td class="price-val">$${producto.precio.toFixed(2)}</td>
+              <td>
+                  <input type="number" class="form-control cantidad-producto mx-auto" data-index="${index}" min="1" value="${producto.cantidad}" style="width: 70px;">
+              </td>
+              <td class="subtotal-val fw-bold">$${subtotal.toFixed(2)}</td>
+              <td>
+                  <button class="btn btn-danger btn-sm eliminar-producto rounded-3" data-index="${index}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                  </button>
+              </td>
+          </tr>
+        `;
+      });
+  
+      totalCarrito.innerText = total.toFixed(2);
+    }
 
     document.querySelectorAll(".cantidad-producto").forEach(input => {
       input.addEventListener("change", function () {
         const index = this.dataset.index;
         const nuevaCantidad = parseInt(this.value);
-        carrito[index].cantidad = nuevaCantidad;
+        if (nuevaCantidad > 0) {
+          carrito[index].cantidad = nuevaCantidad;
+        } else {
+          carrito.splice(index, 1);
+        }
         actualizarCarrito();
         actualizarNotificacion();
       });
@@ -348,30 +397,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const currentTheme = localStorage.getItem('theme') || 'dark';
   document.documentElement.setAttribute('data-theme', currentTheme);
 
-  const toggleBtn = document.createElement('button');
-  toggleBtn.id = 'theme-toggle';
-  toggleBtn.className = 'theme-toggle-btn';
-  toggleBtn.setAttribute('aria-label', 'Cambiar Tema');
-  toggleBtn.innerHTML = currentTheme === 'dark' ? SVG_ICONS.sun : SVG_ICONS.moon;
-  document.body.appendChild(toggleBtn);
+  let toggleBtn = document.getElementById('theme-toggle-header');
+  if (!toggleBtn) {
+    toggleBtn = document.createElement('button');
+    toggleBtn.id = 'theme-toggle';
+    toggleBtn.className = 'theme-toggle-btn';
+    toggleBtn.setAttribute('aria-label', 'Cambiar Tema');
+    document.body.appendChild(toggleBtn);
+  }
+
+  function actualizarToggleIcon(theme) {
+    if (toggleBtn) {
+      toggleBtn.innerHTML = theme === 'dark' ? SVG_ICONS.sun : SVG_ICONS.moon;
+    }
+  }
+
+  actualizarToggleIcon(currentTheme);
 
   toggleBtn.addEventListener('click', function () {
     const activeTheme = document.documentElement.getAttribute('data-theme');
-    let newTheme = 'dark';
-    if (activeTheme === 'dark') {
-      newTheme = 'light';
-      toggleBtn.innerHTML = SVG_ICONS.moon;
-    } else {
-      newTheme = 'dark';
-      toggleBtn.innerHTML = SVG_ICONS.sun;
-    }
+    const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
     
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+    actualizarToggleIcon(newTheme);
   });
 
   // --- 2. Efecto Sticky Encogimiento del Header ---
-  const header = document.querySelector('header');
+  const header = document.querySelector('.navbar-header');
   if (header) {
     window.addEventListener('scroll', function () {
       if (window.scrollY > 50) {
