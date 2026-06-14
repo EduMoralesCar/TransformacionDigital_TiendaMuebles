@@ -5,6 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ecommerce - Contacto</title>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +56,7 @@
         <h2 class="text-center my-5">Contacto</h2>
 
         <div class="row justify-content-center">
-            <form class="col-md-8 needs-validation" novalidate>
+            <form class="card p-5 col-md-8 needs-validation tilt-3d" novalidate>
                 <fieldset>
                     <legend class="bg-primary text-center text-white fs-2">Tus Datos</legend>
 

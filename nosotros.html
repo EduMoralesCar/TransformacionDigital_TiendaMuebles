@@ -5,6 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ecommerce - Nosotros</title>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,70 +58,80 @@
     <main class="container-xl py-5">
         <h2 class="text-center my-5">Sobre Nosotros</h2>
 
-        <div id="historia" class="row g-5 align-items-center mb-4">
+        <div id="historia" class="row g-5 align-items-center mb-5">
             <div class="col-md-6">
-                <img class="card-img-top" src="img/nosotros/nosotros1.jpg" alt="imagen sobre nosotros">
+                <img class="img-fluid rounded-4 shadow-lg tilt-3d" src="img/nosotros/nosotros1.jpg" alt="imagen sobre nosotros">
             </div>
             <div class="col-md-6">
-                <h3>Nuestra Historia</h3>
-                <p>Bienvenidos a Tienda de Muebles, un lugar donde el diseño y la calidad se encuentran para transformar
-                    tu hogar. Nuestra historia comenzó hace más de 20 años cuando un apasionado artesano decidió
-                    compartir su amor por la creación de muebles únicos y elegantes con el mundo. Desde nuestros
-                    humildes comienzos en un pequeño taller, hemos crecido para convertirnos en una marca reconocida por
-                    la excelencia en el diseño y la artesanía.</p>
-            </div>
-        </div>
-
-        <div id="mision" class="row g-5 align-items-center mb-4">
-            <div class="col-md-6">
-                <h3>Misión, Visión y Valores</h3>
-                <p>Nuestra misión es proporcionar a nuestros clientes muebles y decoraciones que no solo embellezcan sus
-                    hogares, sino que también reflejen su personalidad y estilo de vida. Creemos que cada hogar cuenta
-                    una historia, y nuestros muebles son los protagonistas que aportan calidez y carácter a cada
-                    espacio. Nos enorgullecemos de ofrecer una amplia gama de productos que combinan estilo, comodidad y
-                    funcionalidad.</p>
-            </div>
-            <div class="col-md-6">
-                <img class="card-img-top" src="img/nosotros/nosotros2.png" alt="imagen sobre nosotros">
+                <div class="card p-5 tilt-3d">
+                    <h3>Nuestra Historia</h3>
+                    <p>Bienvenidos a Tienda de Muebles, un lugar donde el diseño y la calidad se encuentran para transformar
+                        tu hogar. Nuestra historia comenzó hace más de 20 años cuando un apasionado artesano decidió
+                        compartir su amor por la creación de muebles únicos y elegantes con el mundo. Desde nuestros
+                        humildes comienzos en un pequeño taller, hemos crecido para convertirnos en una marca reconocida por
+                        la excelencia en el diseño y la artesanía.</p>
+                </div>
             </div>
         </div>
 
-        <div id="carrera" class="row g-5 align-items-center mb-4">
+        <div id="mision" class="row g-5 align-items-center mb-5">
             <div class="col-md-6">
-                <img class="card-img-top" src="img/nosotros/nosotros3.png" alt="imagen sobre nosotros">
+                <div class="card p-5 tilt-3d">
+                    <h3>Misión, Visión y Valores</h3>
+                    <p>Nuestra misión es proporcionar a nuestros clientes muebles y decoraciones que no solo embellezcan sus
+                        hogares, sino que también reflejen su personalidad y estilo de vida. Creemos que cada hogar cuenta
+                        una historia, y nuestros muebles son los protagonistas que aportan calidez y carácter a cada
+                        espacio. Nos enorgullecemos de ofrecer una amplia gama de productos que combinan estilo, comodidad y
+                        funcionalidad.</p>
+                </div>
             </div>
             <div class="col-md-6">
-                <h3>Carreras</h3>
-                <p>En Tienda de Muebles, valoramos el talento y la dedicación. Estamos constantemente buscando personas
-                    apasionadas y creativas que deseen unirse a nuestro equipo. Ofrecemos oportunidades de crecimiento y
-                    desarrollo profesional en un entorno dinámico y colaborativo. Si estás interesado en formar parte de
-                    nuestra familia, consulta nuestras vacantes disponibles y aplica hoy mismo.</p>
-            </div>
-        </div>
-
-        <div id="politica" class="row g-5 align-items-center mb-4">
-            <div class="col-md-6">
-                <h3>Política de Privacidad</h3>
-                <p>En Tienda de Muebles, nos comprometemos a proteger la privacidad de nuestros clientes. Respetamos y
-                    valoramos la confianza que depositan en nosotros, y nos aseguramos de manejar sus datos personales
-                    de manera segura y responsable. Para más detalles sobre cómo recopilamos, usamos y protegemos su
-                    información, consulte nuestra Política de Privacidad.</p>
-            </div>
-            <div class="col-md-6">
-                <img class="card-img-top" src="img/nosotros/nosotros4.png" alt="imagen sobre nosotros">
+                <img class="img-fluid rounded-4 shadow-lg tilt-3d" src="img/nosotros/nosotros2.png" alt="imagen sobre nosotros">
             </div>
         </div>
 
-        <div id="servicio" class="row g-5 align-items-center mb-4">
+        <div id="carrera" class="row g-5 align-items-center mb-5">
             <div class="col-md-6">
-                <img class="card-img-top" src="img/nosotros/nosotros5.png" alt="imagen sobre nosotros">
+                <img class="img-fluid rounded-4 shadow-lg tilt-3d" src="img/nosotros/nosotros3.png" alt="imagen sobre nosotros">
             </div>
             <div class="col-md-6">
-                <h3>Términos del Servicio</h3>
-                <p>Al utilizar nuestros servicios, los clientes aceptan cumplir con nuestros términos y condiciones.
-                    Estos términos establecen las reglas y directrices para el uso de nuestro sitio web y la compra de
-                    nuestros productos. Nos esforzamos por proporcionar una experiencia de compra justa y transparente.
-                    Para obtener más información, lea nuestros Términos del Servicio completos.</p>
+                <div class="card p-5 tilt-3d">
+                    <h3>Carreras</h3>
+                    <p>En Tienda de Muebles, valoramos el talento y la dedicación. Estamos constantemente buscando personas
+                        apasionadas y creativas que deseen unirse a nuestro equipo. Ofrecemos oportunidades de crecimiento y
+                        desarrollo profesional en un entorno dinámico y colaborativo. Si estás interesado en formar parte de
+                        nuestra familia, consulta nuestras vacantes disponibles y aplica hoy mismo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="politica" class="row g-5 align-items-center mb-5">
+            <div class="col-md-6">
+                <div class="card p-5 tilt-3d">
+                    <h3>Política de Privacidad</h3>
+                    <p>En Tienda de Muebles, nos comprometemos a proteger la privacidad de nuestros clientes. Respetamos y
+                        valoramos la confianza que depositan en nosotros, y nos aseguramos de manejar sus datos personales
+                        de manera segura y responsable. Para más detalles sobre cómo recopilamos, usamos y protegemos su
+                        información, consulte nuestra Política de Privacidad.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img class="img-fluid rounded-4 shadow-lg tilt-3d" src="img/nosotros/nosotros4.png" alt="imagen sobre nosotros">
+            </div>
+        </div>
+
+        <div id="servicio" class="row g-5 align-items-center mb-5">
+            <div class="col-md-6">
+                <img class="img-fluid rounded-4 shadow-lg tilt-3d" src="img/nosotros/nosotros5.png" alt="imagen sobre nosotros">
+            </div>
+            <div class="col-md-6">
+                <div class="card p-5 tilt-3d">
+                    <h3>Términos del Servicio</h3>
+                    <p>Al utilizar nuestros servicios, los clientes aceptan cumplir con nuestros términos y condiciones.
+                        Estos términos establecen las reglas y directrices para el uso de nuestro sitio web y la compra de
+                        nuestros productos. Nos esforzamos por proporcionar una experiencia de compra justa y transparente.
+                        Para obtener más información, lea nuestros Términos del Servicio completos.</p>
+                </div>
             </div>
         </div>
     </main>
