@@ -5,6 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ecommerce - Blog</title>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,11 +55,10 @@
     <section class="container-xl py-5">
         <h2 class="text-center my-5">Blog</h2>
 
-        <div class="row mt-5 gx-5">
-            <main class="col-md-8 order-1 order-md-0">
-                <article class="mb-2 pb-5">
-                    <h2 id="guia-colores" class="my-5">Guía de Colores</h2>
-                    <img class="img-fluid" src="img/blog/guia_colores.jpg" alt="imagen blog">
+        <div class="row mt-5 gx-5">            <main class="col-md-8 order-1 order-md-0">
+                <article class="card p-5 mb-5 tilt-3d">
+                    <h2 id="guia-colores" class="my-3">Guía de Colores</h2>
+                    <img class="img-fluid rounded-4 mb-4" src="img/blog/guia_colores.jpg" alt="imagen blog">
 
                     <div class="d-flex flex-column flex-md-row justify-content-md-between py-4">
                         <p class="fw-bold">Fecha:
@@ -66,8 +71,7 @@
 
                     <h3>El impacto del color en el diseño de interiores</h3>
 
-                    <p class="py-4">El color es una herramienta poderosa en la decoración del hogar. No solo influye en
-                        la estética,
+                    <p class="py-4">El color es una herramienta poderosa en la decoración del hogar. No solo influye en la estética,
                         sino también en el estado de ánimo y la percepción del espacio. Elegir la paleta adecuada puede
                         hacer que una habitación parezca más grande, más acogedora o más sofisticada.</p>
 
@@ -77,9 +81,9 @@
 
                 </article>
 
-                <article class="mb-2 pb-5 border-top">
-                    <h2 id="nuevos-modelos" class="my-5">Nuevos Modelos</h2>
-                    <img class="img-fluid" src="img/blog/nuevos_modelos.jpg" alt="imagen blog">
+                <article class="card p-5 mb-5 tilt-3d">
+                    <h2 id="nuevos-modelos" class="my-3">Nuevos Modelos</h2>
+                    <img class="img-fluid rounded-4 mb-4" src="img/blog/nuevos_modelos.jpg" alt="imagen blog">
 
                     <div class="d-flex flex-column flex-md-row justify-content-md-between py-4">
                         <p class="fw-bold">Fecha:
@@ -103,9 +107,9 @@
 
                 </article>
 
-                <article class="mb-2 pb-5 border-top">
-                    <h2 id="diseños-interiores" class="my-5">Guía para diseños de interiores</h2>
-                    <img class="img-fluid" src="img/blog/diseño_interiores.jpg" alt="imagen blog">
+                <article class="card p-5 mb-5 tilt-3d">
+                    <h2 id="diseños-interiores" class="my-3">Guía para diseños de interiores</h2>
+                    <img class="img-fluid rounded-4 mb-4" src="img/blog/diseño_interiores.jpg" alt="imagen blog">
 
                     <div class="d-flex flex-column flex-md-row justify-content-md-between py-4">
                         <p class="fw-bold">Fecha:
@@ -129,9 +133,9 @@
 
                 </article>
 
-                <article class="mb-2 pb-5 border-top">
-                    <h2 id="diseños-exteriores" class="my-5">Guía para diseños de exteriores</h2>
-                    <img class="img-fluid" src="img/blog/diseño_exteriores.jpg" alt="imagen blog">
+                <article class="card p-5 mb-5 tilt-3d">
+                    <h2 id="diseños-exteriores" class="my-3">Guía para diseños de exteriores</h2>
+                    <img class="img-fluid rounded-4 mb-4" src="img/blog/diseño_exteriores.jpg" alt="imagen blog">
 
                     <div class="d-flex flex-column flex-md-row justify-content-md-between py-4">
                         <p class="fw-bold">Fecha:
@@ -156,24 +160,25 @@
                 </article>
             </main>
             <aside class="col-md-4">
-                <h3 class="my-5">Otras Entradas del Blog</h3>
-
-                <ul class="mt-5 ">
-                    <li>
-                        <a class="text-dark text-decoration-none" href="#guia-colores">Guía de Colores</a>
-                    </li>
-                    <li>
-                        <a class="text-dark text-decoration-none" href="#nuevos-modelos">Nuevos Modelos</a>
-                    </li>
-                    <li>
-                        <a class="text-dark text-decoration-none" href="#diseños-interiores">Guía para diseños de
-                            interiores</a>
-                    </li>
-                    <li>
-                        <a class="text-dark text-decoration-none" href="#diseños-exteriores">Guía para diseños de
-                            exteriores</a>
-                    </li>
-                </ul>
+                <div class="card p-5 tilt-3d">
+                    <h3 class="mb-4">Otras Entradas del Blog</h3>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2">
+                            <a class="text-dark text-decoration-none" href="#guia-colores">Guía de Colores</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-dark text-decoration-none" href="#nuevos-modelos">Nuevos Modelos</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-dark text-decoration-none" href="#diseños-interiores">Guía para diseños de
+                                interiores</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-dark text-decoration-none" href="#diseños-exteriores">Guía para diseños de
+                                exteriores</a>
+                        </li>
+                    </ul>
+                </div>
             </aside>
         </div>
     </section>
