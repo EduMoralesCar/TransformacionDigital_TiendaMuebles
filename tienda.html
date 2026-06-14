@@ -5,6 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ecommerce - Tienda</title>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +54,9 @@
 
     <!-- Botón de Carrito -->
     <button class="btn btn-warning boton-carrito" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#menu">🛒<span class="notificacion" id="notificacion-carrito"></span>
+        data-bs-target="#menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+        <span class="notificacion" id="notificacion-carrito"></span>
     </button>
 
     <div id="menu" class="offcanvas offcanvas-end">
@@ -96,100 +104,27 @@
     <main id="productos" class="container-xl py-5">
         <h2 class="text-center my-5 ">Nuestros Productos</h2>
 
-        <div class="row g-0 pt-5 mb-4">
-            <div class="col-md-8">
-                <img class="card-img-top" src="img/productos/producto1.jpg" alt="imagen producto">
-            </div>
-            <div class="card col-md-4 bg-primary text-center p-5 text-white d-flex flex-column justify-content-center">
-                <h3>Mueble elegante y funcional</h3>
-                <p>Nuestro mueble de alta calidad ofrece dos compartimentos para exhibir y organizar tus objetos.
-                    Incluye un jarrón decorativo.</p>
-                <p class="fs-1 fw-bold">$4,000.00</p>
-                <button class="boton btn btn-success fs-3 fw-bold text-uppercase py-3 d-block agregar-carrito">Agregar
-                    al Carro 🛒</button>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="img/productos/producto2.jpg" alt="imagen producto">
-                    <div class="card-body text-center bg-primary text-white p-5">
-                        <h3>Decoración de Hogar</h3>
-                        <p>Renueva tu hogar con este elegante conjunto. Incluye: sofá en forma de L con cojines
-                            estampados, mesa de centro con jarrón y tetera, cómoda blanca, reloj de péndulo, lámpara de
-                            pie, y plantas decorativas.</p>
-                        <p class="fs-1 fw-bold">$5,500.00</p>
-                        <button
-                            class="boton btn btn-success fs-3 fw-bold text-uppercase py-3 d-block agregar-carrito">Agregar
-                            al Carro 🛒</button>
+        <!-- Buscador y Filtros -->
+        <div class="filter-container mt-5">
+            <div class="row align-items-center g-4">
+                <div class="col-md-5">
+                    <div class="search-input-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="search-products" class="form-control" placeholder="Buscar muebles por nombre...">
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="img/productos/producto3.jpg" alt="imagen producto">
-                    <div class="card-body text-center bg-primary text-white p-5">
-                        <h3>Sofá elegante y cómodo</h3>
-                        <p>Disfruta del máximo confort con este elegante sofá gris con acolchado. Incluye dos cojines
-                            color teal y un cojín decorativo en el centro. Ideal para cualquier sala, este sofá combina
-                            estilo y funcionalidad.</p>
-                        <p class="fs-1 fw-bold">$3,500.00</p>
-                        <button
-                            class="boton btn btn-success fs-3 fw-bold text-uppercase py-3 d-block agregar-carrito">Agregar
-                            al Carro 🛒</button>
-                    </div>
+                <div class="col-md-7 text-md-end text-center">
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="hogar">Hogar</button>
+                    <button class="filter-btn" data-filter="oficina">Oficina</button>
+                    <button class="filter-btn" data-filter="dormitorio">Dormitorio</button>
+                    <button class="filter-btn" data-filter="sala">Sala</button>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="img/productos/producto4.jpg" alt="imagen producto">
-                    <div class="card-body text-center bg-primary text-white p-5">
-                        <h3>Conjunto de Mesa y Sillas Elegante</h3>
-                        <p>Añade un toque moderno a tu espacio con este conjunto. Incluye una mesa redonda blanca con
-                            pedestal central y dos sillas con patas de madera y asientos negros. Perfecto para cualquier
-                            rincón acogedor.</p>
-                        <p class="fs-1 fw-bold">$1,200.00</p>
-                        <button
-                            class="boton btn btn-success fs-3 fw-bold text-uppercase py-3 d-block agregar-carrito">Agregar
-                            al Carro 🛒</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="img/productos/producto5.jpg" alt="imagen producto">
-                    <div class="card-body text-center bg-primary text-white p-5">
-                        <h3>Conjunto de Dormitorio Moderno</h3>
-                        <p>Completa tu dormitorio con este elegante conjunto. Incluye: una cama con cabecero tapizado,
-                            ropa de cama blanca, cortinas gris oscuro, una lámpara colgante y una mesita de noche de
-                            madera.</p>
-                        <p class="fs-1 fw-bold">$8,000.00</p>
-                        <button
-                            class="boton btn btn-success fs-3 fw-bold text-uppercase py-3 d-block agregar-carrito">Agregar
-                            al Carro 🛒</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="img/productos/producto6.jpg" alt="imagen producto">
-                    <div class="card-body text-center bg-primary text-white p-5">
-                        <h3>Conjunto de Dormitorio Minimalista</h3>
-                        <p>Añade elegancia y funcionalidad a tu dormitorio con este conjunto. Incluye: cama con cabecero
-                            de madera, dos mesas de noche flotantes, varias decoraciones, y un elegante conjunto de ropa
-                            de cama gris.</p>
-                        <p class="fs-1 fw-bold">$7,500.00</p>
-                        <button
-                            class="boton btn btn-success fs-3 fw-bold text-uppercase py-3 d-block agregar-carrito">Agregar
-                            al Carro 🛒</button>
-                    </div>
-                </div>
-            </div>
+        <div id="grid-productos" class="row g-4 pt-5">
+            <!-- Los productos se cargarán dinámicamente desde js/app.js -->
         </div>
     </main>
 
@@ -199,21 +134,21 @@
         <h2 class="text-center py-5">Categorías de Productos</h2>
 
         <div class="row mt-5">
-            <div class="col-md-4 categoria">
+            <div class="col-md-4 categoria tilt-3d">
                 <div class="overflow-hidden">
                     <img class="img-fluid" src="img/galeria/jardin_04.jpg" alt="imagen categoria">
                 </div>
                 <a class="text-dark fs-2 text-decoration-none text-center d-block py-3" href="galeria.html">Jardin</a>
             </div>
 
-            <div class="col-md-4 categoria">
+            <div class="col-md-4 categoria tilt-3d">
                 <div class="overflow-hidden">
                     <img class="img-fluid" src="img/galeria/sala_01.jpg" alt="imagen categoria">
                 </div>
                 <a class="text-dark fs-2 text-decoration-none text-center d-block py-3" href="galeria.html">Sala</a>
             </div>
 
-            <div class="col-md-4 categoria">
+            <div class="col-md-4 categoria tilt-3d">
                 <div class="overflow-hidden">
                     <img class="img-fluid" src="img/galeria/dormitorio_08.jpg" alt="imagen categoria">
                 </div>
@@ -266,6 +201,88 @@
             </p>
         </div>
     </footer>
+
+    <!-- Beneficios y Garantías (Trust Badges) -->
+    <section class="container-xl benefits-section py-5">
+        <h2 class="text-center mb-5">Experiencia de Compra Asegurada</h2>
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="benefit-card tilt-3d">
+                    <span class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="benefit-svg"><rect x="1" y="3" width="15" height="13" rx="2" ry="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    </span>
+                    <h4>Envío Express</h4>
+                    <p>Entrega a domicilio asegurada con embalaje 3D de alta resistencia.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="benefit-card tilt-3d">
+                    <span class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="benefit-svg"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </span>
+                    <h4>Madera Noble</h4>
+                    <p>Materiales premium seleccionados y acabados artesanales únicos.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="benefit-card tilt-3d">
+                    <span class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="benefit-svg"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    </span>
+                    <h4>Diseño AR/3D</h4>
+                    <p>Visualiza cada detalle del mueble en 360° antes de comprar.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="benefit-card tilt-3d">
+                    <span class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="benefit-svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 11 2 2 4-4"/></svg>
+                    </span>
+                    <h4>Garantía Real</h4>
+                    <p>5 años de cobertura completa en estructura y herrajes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal del Visualizador 3D -->
+    <div class="modal fade" id="modal3D" tabindex="-1" aria-labelledby="modal3DLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fw-bold" id="modal3DLabel">Visualizador 3D</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <div class="viewer-3d-stage">
+                        <div class="viewer-3d-platform"></div>
+                        <div class="viewer-3d-shadow"></div>
+                        <div class="viewer-3d-object">
+                            <img src="" alt="Producto 3D">
+                        </div>
+                    </div>
+                    <p class="text-muted mt-3 fs-4">🖱️ Haz clic y arrastra para rotar libremente en 3D</p>
+                    <div class="viewer-3d-controls pb-4">
+                        <button class="viewer-control-btn rot-left" title="Rotar Izquierda">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg>
+                        </button>
+                        <button class="viewer-control-btn reset-view" title="Restaurar Vista">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>
+                        </button>
+                        <button class="viewer-control-btn rot-right" title="Rotar Derecha">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7v6h-6"/><path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"/></svg>
+                        </button>
+                        <button class="viewer-control-btn zoom-in" title="Acercar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <button class="viewer-control-btn zoom-out" title="Alejar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
