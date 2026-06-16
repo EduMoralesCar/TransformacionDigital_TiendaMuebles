@@ -14,7 +14,7 @@ Este proyecto representa la **transformación digital y rediseño premium de una
 
 ---
 
-## 🌟 Características Destacadas y Rediseño Premium
+## Características Destacadas y Rediseño Premium
 
 1. **Visor de Muebles 3D Interactivo:** Visualiza cada mueble en un escenario tridimensional con rotación libre (por arrastre de ratón o botones) y zoom dinámico en tiempo real.
 2. **Encabezado Único y Pegajoso (Sticky Header):** Unificación del banner y el menú de navegación en una barra superior flotante con desenfoque de fondo premium (Blur/Glassmorphism).
