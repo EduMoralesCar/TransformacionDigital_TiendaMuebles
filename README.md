@@ -1,4 +1,4 @@
-# 🛋️ Transformación Digital - Tienda de Muebles Premium 3D
+# Transformación Digital - Tienda de Muebles Premium 3D
 
 Este proyecto representa la **transformación digital y rediseño premium de una tienda de muebles real**, desarrollado como parte de un trabajo de e-commerce moderno de alta gama. Combina una interfaz interactiva tridimensional (3D) con un diseño responsivo impecable y un sistema avanzado de temas.
 
