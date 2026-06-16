@@ -4,7 +4,7 @@ Este proyecto representa la **transformación digital y rediseño premium de una
 
 ---
 
-## 🛠️ Herramientas y Tecnologías Utilizadas
+## Herramientas y Tecnologías Utilizadas
 
 - **HTML5 Semántico**: Estructura robusta y optimizada para SEO.
 - **Vanilla CSS3 (Custom Properties)**: Estilos interactivos, variables dinámicas para modo oscuro/claro, animaciones personalizadas y efectos de vidrio esmerilado (Glassmorphism).
