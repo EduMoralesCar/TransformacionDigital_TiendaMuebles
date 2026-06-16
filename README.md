@@ -28,14 +28,14 @@ Este proyecto representa la **transformación digital y rediseño premium de una
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 Brindar una experiencia de comercio electrónico real y premium, demostrando capacidades avanzadas de diseño web de alta gama, usabilidad, animaciones modernas y optimización en dispositivos móviles y de escritorio.
 
 ---
 
 
-## 🚀 Cómo Clonar y Ejecutar el Proyecto
+## Cómo Clonar y Ejecutar el Proyecto
 
 ### 1. Clonar el repositorio
 
