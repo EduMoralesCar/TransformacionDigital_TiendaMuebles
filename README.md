@@ -73,7 +73,7 @@ Puedes abrir el archivo index.html directamente en tu navegador:
 └── 📁 js
 ```
 ---
-## 📸 Vista Previa
+## Vista Previa
 > El sitio incluye imágenes de productos como sofás, conjuntos de dormitorio, decoración de hogar y más, organizados por categorías como Oficina, Hogar y Cocina.
 ## 🖼️ Capturas de Pantalla
 > ### Paso 1: Página principal con acceso rápido a productos destacados y navegación general.
