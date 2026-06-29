@@ -58,21 +58,6 @@ Puedes abrir el archivo index.html directamente en tu navegador:
 - Si deseas modificar estilos, edita el archivo css/app.css
 
 ---
-
-## 📁 Estructura del Repositorio
-```
-├── 📁 blog
-├── 📁 css
-├── 📁 img
-│   ├── 📁 Principal
-│   ├── 📁 blog
-│   ├── 📁 categoria
-│   ├── 📁 galeria
-│   ├── 📁 nosotros
-│   └── 📁 productos
-└── 📁 js
-```
----
 ## Vista Previa
 > El sitio incluye imágenes de productos como sofás, conjuntos de dormitorio, decoración de hogar y más, organizados por categorías como Oficina, Hogar y Cocina.
 ## 🖼️ Capturas de Pantalla
